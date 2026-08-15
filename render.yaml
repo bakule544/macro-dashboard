@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: macro-dashboard
+    env: python
+    buildCommand: ""
+    startCommand: python server.py --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: FRED_API_KEY
+        sync: false
